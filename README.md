@@ -7,7 +7,7 @@ This repository contains various Dockerfiles that I find useful in my workflow. 
 ---
 **Launching Juno IDE GUI**:
 
-The juno IDE image has only been tested using Ubuntu 18.04 on the local machine. Getting the GUI to display on Windows and MacOS will require alternative methods.
+The Juno IDE image has only been tested using Ubuntu 18.04 on the local machine. Getting the GUI to display on Windows and MacOS will require alternative methods.
 
 To luanch the GUI, run the Juno IDE image using the following commands:
 ```bash
