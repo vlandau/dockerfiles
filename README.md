@@ -1,6 +1,6 @@
 # Dockerfiles
 
-This repository contains various useful Dockerfiles that I find useful in my workflow. Docker images derived from these Dockerfiles will be hosted on Docker Hub here: https://hub.docker.com/u/vlandau
+This repository contains various Dockerfiles that I find useful in my workflow. Images built from these Dockerfiles will be hosted on Docker Hub here: https://hub.docker.com/u/vlandau
 <br/>
 
 ### Some useful notes
