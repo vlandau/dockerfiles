@@ -5,7 +5,7 @@ This repository contains various useful Dockerfiles that I find useful in my wor
 
 ### Some useful notes
 ---
-**Launching Juno/Atom GUI**:
+**Launching Juno IDE GUI**:
 
 The juno IDE image has only been tested using Ubuntu 18.04 on the local machine. Getting the GUI to display on Windows and MacOS will require alternative methods.
 
