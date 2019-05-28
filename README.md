@@ -28,5 +28,5 @@ Once you've launched the GUI, follow the directions [here](http://docs.junolab.o
 docker run -it --rm \
      -v "$(pwd)":/home/jupyter \
      -p 8888:8888 \
-     vlandau\jupyter:julia-python3
+     vlandau/jupyter:julia-python3
 ```
