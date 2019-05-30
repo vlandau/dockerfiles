@@ -14,7 +14,7 @@ RUN apt-get update && \
 	 python3-gdal && \
 	pip3 install setuptools wheel
 
-RUN apt-get install -y build-essential gcc
+RUN apt-get install -y build-essential
 
 RUN pip3 install jupyter
 
@@ -26,7 +26,6 @@ RUN pip3 install GDAL==2.1.3 --global-option=build_ext \
 
 # Install Julia 
 RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.1/julia-1.1.0-linux-x86_64.tar.gz -O /home/tmp/julia.tar.gz
-
 RUN tar -zxvf home/tmp/julia.tar.gz
 RUN rm -rf home/tmp
 RUN ln -s /julia-1.1.0/bin/julia /usr/bin/julia
