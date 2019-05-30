@@ -23,7 +23,7 @@ docker run -d --rm -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
 
 Once you've launched the GUI, follow the directions [here](http://docs.junolab.org/latest/man/installation/) (list item #4) to get Juno up and running.
 
-**Running Jupyter**:
+**Running Jupyter (Julia and python or spatial)**:
 ```bash
 docker run -it --rm \
      -v "$(pwd)":/home/jupyter \
