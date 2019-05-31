@@ -20,7 +20,7 @@ RUN pip3 install jupyter
 
 RUN mkdir home/tmp
 
-# Install the python gdal api
+# Install the python gdal bindings
 RUN pip3 install GDAL==2.1.3 --global-option=build_ext \
 	--global-option="-I/usr/include/gdal"
 
@@ -32,6 +32,9 @@ RUN ln -s /julia-1.1.0/bin/julia /usr/bin/julia
 
 # Add julia kernel for jupyter
 RUN julia -e 'using Pkg; Pkg.add(["IJulia"])'
+
+# Add julia GDAL bindings
+RUN julia -e 'using Pkg; Pkg.add(["ArchGDAL"])'
 
 EXPOSE 8888
 
