@@ -35,15 +35,12 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
     dpkg -i /tmp/atom.deb && \
-    rm -f /tmp/atom.deb && \
-    useradd -d /home/atom -m atom
+    rm -f /tmp/atom.deb
 
 # Install julia
 RUN curl -L https://julialang-s3.julialang.org/bin/linux/x64/1.1/julia-1.1.0-linux-x86_64.tar.gz > /tmp/julia.tar.gz
 RUN tar -zxvf /tmp/julia.tar.gz
 RUN ln -s /julia-1.1.0/bin/julia /usr/bin/julia
-
-USER atom
 
 RUN apm install uber-juno
 
@@ -57,5 +54,4 @@ RUN julia -e 'using Pkg; Pkg.add(["Juno","Atom","BinaryProvider","DocSeeker", \
 "TreeViews","MbedTLS","Traceur","WebIO","FixedPointNumbers","Requires", \
 "Pidfile"])'
 
-RUN cd home
 CMD ["/usr/bin/atom","-f"]
