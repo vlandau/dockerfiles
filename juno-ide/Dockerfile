@@ -57,4 +57,5 @@ RUN julia -e 'using Pkg; Pkg.add(["Juno","Atom","BinaryProvider","DocSeeker", \
 "TreeViews","MbedTLS","Traceur","WebIO","FixedPointNumbers","Requires", \
 "Pidfile"])'
 
+RUN cd home
 CMD ["/usr/bin/atom","-f"]
