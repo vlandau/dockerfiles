@@ -15,7 +15,7 @@ xhost local:root
 docker run -d --rm -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
               	   -v $HOME/.atom:/home/atom/.atom \
               	   -e DISPLAY \
-              	   vlandau/juno:latest
+              	   vlandau/juno-ide:latest
 ```
 `xhost local:root` allows root access to your display, which allows the GUI to be launched to your desktop.
 
