@@ -12,7 +12,8 @@ The Juno IDE image has only been tested using Ubuntu 18.04 on the local machine.
 To luanch the GUI, run the Juno IDE image using the following commands:
 ```bash
 xhost local:root
-docker run -d --rm -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+docker run -d --rm --ipc = "host" \
+		   -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
               	   -v $HOME/.atom:/home/atom/.atom \
               	   -e DISPLAY \
               	   vlandau/juno-ide:latest
