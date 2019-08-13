@@ -31,3 +31,13 @@ docker run -it --rm \
      -p 8888:8888 \
      vlandau/jupyter:julia-python3
 ```
+
+**Launching QGIS GUI**:
+On Linux:
+```bash
+docker run -i -d --rm --ipc "host" -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+                   -v $HOME/.qgis:/root/.local/share/QGIS \
+                   -v $(pwd):/home/directory_name \
+                   -e DISPLAY \
+                   vlandau/qgis:latest
+```
