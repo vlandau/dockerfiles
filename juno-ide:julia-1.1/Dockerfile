@@ -4,7 +4,7 @@
 
 FROM ubuntu:18.04
 
-ENV ATOM_VERSION v1.36.1
+ENV ATOM_VERSION v1.40.1
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -30,6 +30,7 @@ RUN apt-get update && \
       libgl1-mesa-glx \
       libgl1-mesa-dri \
       python \
+      policykit-1 \
       xdg-utils --no-install-recommends && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \

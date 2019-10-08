@@ -1,4 +1,4 @@
-FROM juno:julia-1.3-rc2
+FROM vlandau/juno:julia-1.3-rc3
 
 RUN apt-get update 
 RUN apt-get install -y zlib1g-dev 
