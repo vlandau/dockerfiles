@@ -9,7 +9,7 @@ RUN apt-get update && \
     ca-certificates
 
 RUN echo "deb https://qgis.org/ubuntu-ltr bionic main" | tee -a /etc/apt/sources.list && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
