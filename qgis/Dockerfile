@@ -6,10 +6,17 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \ 
     gnupg2 \
+    software-properties-common \
+    wget \
     ca-certificates
 
-RUN echo "deb https://qgis.org/ubuntu-ltr bionic main" | tee -a /etc/apt/sources.list && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
+RUN wget -qO - https://qgis.org/downloads/qgis-2020.gpg.key | gpg \ 
+	--no-default-keyring --keyring  \
+	gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
+
+RUN chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+
+RUN add-apt-repository "deb https://qgis.org/debian `lsb_release -c -s` main"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
